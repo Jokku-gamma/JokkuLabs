@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Jokkulabs</title>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Modular CSS Files -->
+    <link rel="stylesheet" href="styles/landingpage/base.css">
+    <link rel="stylesheet" href="styles/landingpage/header.css">
+    <link rel="stylesheet" href="styles/landingpage/footer.css">
+    <link rel="stylesheet" href="styles/lesson/lesson-content.css"> <!-- Reusing for main content container style -->
+    <style>
+        /* Specific styles for About Us content */
+        .about-us-content {
+            padding: 2rem;
+        }
+        .about-us-content h2 {
+            font-size: 2.5rem;
+            color: #93c5fd;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        .about-us-content p {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+        .team-section {
+            margin-top: 3rem;
+            text-align: center;
+        }
+        .team-section h3 {
+            font-size: 2rem;
+            color: #a78bfa;
+            margin-bottom: 2rem;
+        }
+        .team-members {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+        }
+        .team-member-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            max-width: 250px;
+            width: 100%;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.2s ease-in-out;
+        }
+        .team-member-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        }
+        .team-member-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            border: 3px solid #60a5fa;
+        }
+        .team-member-card h4 {
+            font-size: 1.4rem;
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+        .team-member-card p {
+            font-size: 0.95rem;
+            color: #c0c0c0;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .about-us-content h2 {
+                font-size: 2rem;
+            }
+            .about-us-content p {
+                font-size: 1rem;
+            }
+            .team-section h3 {
+                font-size: 1.75rem;
+            }
+            .team-members {
+                flex-direction: column;
+                align-items: center;
+            }
+            .team-member-card {
+                max-width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <svg class="logo-icon" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM5 9a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1zm1 4a1 1 0 100 2h6a1 1 0 100-2H6z" />
+            </svg>
+            <h1>jokkulabs</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html#courses">Courses</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="lesson-content-container">
+        <div class="about-us-content">
+            <h2>About Jokkulabs</h2>
+            <p>Welcome to Jokkulabs, your premier destination for mastering cutting-edge programming skills. Founded with a passion for empowering learners, we believe in making complex technologies accessible and enjoyable. Our mission is to provide high-quality, practical, and engaging courses that equip you with the knowledge and confidence to excel in the fast-evolving tech world.</p>
+            <p>At Jokkulabs, we focus on hands-on learning, real-world projects, and a supportive community. Whether you're a beginner taking your first steps into coding or an experienced developer looking to expand your skillset, our curated courses in Flutter, Python, and C are designed to meet you where you are and guide you to success.</p>
+            <p>We are committed to continuous improvement, regularly updating our curriculum to reflect the latest industry trends and best practices. Join us on this exciting learning journey and unlock your full potential!</p>
+
+            <div class="team-section">
+                <h3>Our Vision</h3>
+                <p>To be the leading platform for practical and innovative tech education, fostering a global community of skilled and confident developers.</p>
+                <h3>Meet the Founder</h3>
+                <div class="team-members">
+                    <div class="team-member-card">
+                        <img src="https://placehold.co/120x120/60a5fa/FFFFFF?text=Joel" alt="Joel, Founder">
+                        <h4>Joel</h4>
+                        <p>Founder & Lead Instructor</p>
+                        <p>Joel is an AIML developer with a deep passion for teaching and exploring new technologies. He created Jokkulabs to share his expertise and inspire the next generation of developers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 jokkulabs. All rights reserved.</p>
+        <p>Designed with passion by Joel for jokkulabs.</p>
+    </footer>
+</body>
+</html>
