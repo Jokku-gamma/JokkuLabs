@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Data Types - Jokkulabs</title>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Modular CSS Files -->
+    <link rel="stylesheet" href="../../../styles/landingpage/base.css">
+    <link rel="stylesheet" href="../../../styles/landingpage/header.css">
+    <link rel="stylesheet" href="../../../styles/landingpage/footer.css">
+    <link rel="stylesheet" href="../../../styles/course-page.css">
+    <link rel="stylesheet" href="../../../styles/python/lesson-content.css"> <!-- General lesson content styles -->
+    <link rel="stylesheet" href="../../../styles/python/code.css">         <!-- Code block styles -->
+    <link rel="stylesheet" href="../../../styles/lesson/output.css">       <!-- Output block styles -->
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <svg class="logo-icon" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM5 9a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1zm1 4a1 1 0 100 2h6a1 1 0 100-2H6z" />
+            </svg>
+            <h1>jokkulabs</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../../../index.html#courses">Courses</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="lesson-content-container">
+        <h1>Python Data Types</h1>
+        <p>In this lesson, we'll explore the fundamental building blocks of data in Python: Data Types. Understanding these types is crucial for writing effective and error-free Python code, as they dictate what kind of values variables can hold and what operations can be performed on them.</p>
+
+        <h2>What are Data Types?</h2>
+        <p>A data type is a classification that specifies which type of value a variable has and what type of mathematical, relational, or logical operations can be applied to it without causing an error. Python is a dynamically typed language, meaning you don't need to explicitly declare the data type of a variable when you create it; Python infers it at runtime.</p>
+
+        <h2>Common Python Data Types</h2>
+
+        <h3>1. Numeric Types: `int`, `float`, `complex`</h3>
+        <p>These represent numbers.</p>
+        <ul>
+            <li><strong>`int` (Integer):</strong> Whole numbers, positive or negative, without a decimal point.</li>
+            <li><strong>`float` (Floating-point number):</strong> Numbers with a decimal point, or numbers written using scientific notation.</li>
+            <li><strong>`complex` (Complex number):</strong> Numbers with a real and imaginary part (e.g., `3 + 5j`).</li>
+        </ul>
+        <pre><code class="language-python">
+# Integers
+age = 30
+quantity = -10
+
+# Floats
+price = 19.99
+pi = 3.14159
+
+# Complex numbers
+z = 2 + 3j
+
+print(f"Age: {age}, Type: {type(age)}")
+print(f"Price: {price}, Type: {type(price)}")
+print(f"Complex Number: {z}, Type: {type(z)}")
+        </code></pre>
+        <div class="output-block">
+            <strong>Expected Output:</strong>
+            <pre><code>Age: 30, Type: <class 'int'>
+Price: 19.99, Type: <class 'float'>
+Complex Number: (2+3j), Type: <class 'complex'></code></pre>
+        </div>
+
+        <h3>2. Text Type: `str` (String)</h3>
+        <p>Strings are sequences of characters, used for text. They are enclosed in single quotes (`'...'`), double quotes (`"..."`), or triple quotes (`'''...'''` or `"""..."""`) for multi-line strings.</p>
+        <pre><code class="language-python">
+name = "Joel"
+greeting = 'Hello, Jokkulabs!'
+multiline_text = """
+This is a
+multi-line string.
+"""
+
+print(f"Name: {name}, Type: {type(name)}")
+print(f"Greeting: {greeting}, Type: {type(greeting)}")
+print(f"Multiline Text: {multiline_text}, Type: {type(multiline_text)}")
+        </code></pre>
+        <div class="output-block">
+            <strong>Expected Output:</strong>
+            <pre><code>Name: Joel, Type: <class 'str'>
+Greeting: Hello, Jokkulabs!, Type: <class 'str'>
+Multiline Text:
+This is a
+multi-line string.
+, Type: <class 'str'></code></pre>
+        </div>
+
+        <h3>3. Boolean Type: `bool`</h3>
+        <p>Booleans represent truth values: `True` or `False`. They are fundamental for logic and control flow.</p>
+        <pre><code class="language-python">
+is_student = True
+is_admin = False
+
+print(f"Is student: {is_student}, Type: {type(is_student)}")
+print(f"Is admin: {is_admin}, Type: {type(is_admin)}")
+        </code></pre>
+        <div class="output-block">
+            <strong>Expected Output:</strong>
+            <pre><code>Is student: True, Type: <class 'bool'>
+Is admin: False, Type: <class 'bool'></code></pre>
+        </div>
+
+        <h3>4. Sequence Types: `list`, `tuple`, `range`</h3>
+        <p>These are ordered collections of items.</p>
+        <ul>
+            <li><strong>`list` (List):</strong> Ordered, mutable (changeable) collection. Defined with square brackets `[...]`.</li>
+            <li><strong>`tuple` (Tuple):</strong> Ordered, immutable (unchangeable) collection. Defined with parentheses `(...)`.</li>
+            <li><strong>`range` (Range):</strong> An immutable sequence of numbers, often used in loops.</li>
+        </ul>
+        <pre><code class="language-python">
+my_list = [1, "apple", True]
+my_tuple = (10, 20, 30)
+my_range = range(5) # 0, 1, 2, 3, 4
+
+print(f"List: {my_list}, Type: {type(my_list)}")
+print(f"Tuple: {my_tuple}, Type: {type(my_tuple)}")
+print(f"Range: {list(my_range)}, Type: {type(my_range)}") # Convert range to list for printing
+        </code></pre>
+        <div class="output-block">
+            <strong>Expected Output:</strong>
+            <pre><code>List: [1, 'apple', True], Type: <class 'list'>
+Tuple: (10, 20, 30), Type: <class 'tuple'>
+Range: [0, 1, 2, 3, 4], Type: <class 'range'></code></pre>
+        </div>
+
+        <h3>5. Mapping Type: `dict` (Dictionary)</h3>
+        <p>Dictionaries are unordered collections of key-value pairs. Keys must be unique and immutable (like strings or numbers), while values can be of any type.</p>
+        <pre><code class="language-python">
+person = {
+    "name": "Alice",
+    "age": 25,
+    "city": "New York"
+}
+
+print(f"Dictionary: {person}, Type: {type(person)}")
+print(f"Name: {person['name']}")
+        </code></pre>
+        <div class="output-block">
+            <strong>Expected Output:</strong>
+            <pre><code>Dictionary: {'name': 'Alice', 'age': 25, 'city': 'New York'}, Type: <class 'dict'>
+Name: Alice</code></pre>
+        </div>
+
+        <h3>6. Set Types: `set`, `frozenset`</h3>
+        <p>Sets are unordered collections of unique items. They are useful for mathematical set operations like union, intersection, etc.</p>
+        <ul>
+            <li><strong>`set` (Set):</strong> Mutable, unordered collection of unique items. Defined with curly braces `{...}` or `set()`.</li>
+            <li><strong>`frozenset` (Frozenset):</strong> Immutable version of a set.</li>
+        </ul>
+        <pre><code class="language-python">
+my_set = {1, 2, 3, 2, 1} # Duplicates are automatically removed
+my_frozenset = frozenset([4, 5, 6])
+
+print(f"Set: {my_set}, Type: {type(my_set)}")
+print(f"Frozenset: {my_frozenset}, Type: {type(my_frozenset)}")
+        </code></pre>
+        <div class="output-block">
+            <strong>Expected Output:</strong>
+            <pre><code>Set: {1, 2, 3}, Type: <class 'set'>
+Frozenset: frozenset({4, 5, 6}), Type: <class 'frozenset'></code></pre>
+        </div>
+
+        <p>Understanding these basic data types is fundamental to writing any Python program. You'll use them constantly to store and manipulate information.</p>
+
+        <div class="navigation-buttons">
+            <a href="../index.html" class="btn-secondary">Back to Course Content</a>
+            <a id="next-lesson-button" href="#" class="btn-secondary" style="display:none;">Next Lesson &#8594;</a>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 jokkulabs. All rights reserved.</p>
+        <p>Designed with passion by Joel for jokkulabs.</p>
+    </footer>
+
+    <!-- JavaScript for lesson navigation -->
+    <script src="../../../scripts/fetchcoursecontent.js"></script>
+    <script>
+        // IMPORTANT: Replace 'YOUR_GITHUB_USERNAME' and 'YOUR_REPO_NAME' with your actual GitHub details.
+        // Ensure 'main' is your default branch name (could be 'master').
+        const githubApiPathForPythonContents = 'Jokku-gamma/Jokkulabs/contents/courses/python/contents?ref=main';
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Call setupLessonNavigation for this specific lesson
+            setupLessonNavigation('python', '02 - Python Data Types.html', 'next-lesson-button', githubApiPathForPythonContents);
+        });
+    </script>
+</body>
+</html>
