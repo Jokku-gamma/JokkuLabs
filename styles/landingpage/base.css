@@ -27,25 +27,39 @@ body {
     border-radius: 9999px; /* rounded-full */
     transition: all 0.3s ease-in-out;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center; /* Ensure text is centered */
+    cursor: pointer; /* Indicate it's clickable */
 }
 
 .btn-primary {
-    background-color: #3b82f6; /* blue-600 */
+    background: linear-gradient(45deg, #3b82f6, #2563eb); /* blue-600 to blue-700 gradient */
     color: #fff;
     font-size: 1.25rem; /* text-xl */
     padding: 1rem 2.5rem; /* py-4 px-10 */
+    border: none; /* Remove default border */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Stronger shadow */
 }
 
 .btn-primary:hover {
-    background-color: #2563eb; /* blue-700 */
-    transform: scale(1.05);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(45deg, #2563eb, #1d4ed8); /* Darker blue gradient on hover */
+    transform: translateY(-3px) scale(1.02); /* Lift and slightly scale */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5); /* Even stronger shadow */
 }
 
 .btn-secondary {
-    background-color: #fff;
-    text-align: center;
+    background: linear-gradient(45deg, #555, #333); /* Dark gray gradient */
+    color: #fff;
     font-size: 1.125rem; /* text-lg */
+    padding: 0.75rem 1.5rem; /* py-3 px-6 */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle light border */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.btn-secondary:hover {
+    background: linear-gradient(45deg, #777, #555); /* Lighter gray gradient on hover */
+    transform: translateY(-2px); /* Slight lift */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    border-color: #93c5fd; /* Light blue border on hover */
 }
 
 /* Highlight text */
