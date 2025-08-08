@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Jokkulabs</title>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Modular CSS Files -->
+    <link rel="stylesheet" href="styles/landingpage/base.css">
+    <link rel="stylesheet" href="styles/landingpage/header.css">
+    <link rel="stylesheet" href="styles/landingpage/footer.css">
+    <link rel="stylesheet" href="styles/lesson/lesson-content.css"> <!-- Reusing for main content container style -->
+    <style>
+        /* Specific styles for Contact Us content */
+        .contact-us-content {
+            padding: 2rem;
+            text-align: center;
+        }
+        .contact-us-content h2 {
+            font-size: 2.5rem;
+            color: #93c5fd;
+            margin-bottom: 1.5rem;
+        }
+        .contact-info {
+            margin-top: 2rem;
+            font-size: 1.1rem;
+            color: #c0c0c0;
+        }
+        .contact-info p {
+            margin-bottom: 0.8rem;
+        }
+        .contact-info a {
+            color: #60a5fa;
+            text-decoration: none;
+            transition: color 0.3s ease-in-out;
+        }
+        .contact-info a:hover {
+            color: #93c5fd;
+            text-decoration: underline;
+        }
+        .social-links {
+            margin-top: 2.5rem;
+            text-align: center;
+        }
+        .social-links a {
+            display: inline-block;
+            margin: 0 1rem;
+            color: #fff;
+            font-size: 2.5rem;
+            transition: transform 0.2s ease-in-out, color 0.3s ease-in-out;
+        }
+        .social-links a:hover {
+            transform: translateY(-5px) scale(1.1);
+            color: #60a5fa;
+        }
+        /* Using Font Awesome for icons */
+        @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css");
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .contact-us-content h2 {
+                font-size: 2rem;
+            }
+            .contact-info {
+                font-size: 1rem;
+            }
+            .social-links a {
+                font-size: 2rem;
+                margin: 0 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <svg class="logo-icon" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM5 9a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1zm1 4a1 1 0 100 2h6a1 1 0 100-2H6z" />
+            </svg>
+            <h1>jokkulabs</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html#courses">Courses</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="lesson-content-container">
+        <div class="contact-us-content">
+            <h2>Get in Touch with Jokkulabs</h2>
+            <p>We'd love to hear from you! Whether you have questions about our courses, need support, or want to provide feedback, our team is here to help.</p>
+
+            <div class="contact-info">
+                <p><strong>Email:</strong> <a href="mailto:info@jokkulabs.com">info@jokkulabs.com</a></p>
+                <p><strong>Phone:</strong> <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+                <p><strong>Address:</strong> 123 Tech Lane, Innovation City, Global 12345</p>
+                <p>Our support team is available Monday to Friday, 9 AM - 5 PM (Your Local Time).</p>
+            </div>
+
+            <div class="social-links">
+                <p>Connect with us on social media:</p>
+                <a href="https://facebook.com/jokkulabs" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-square"></i></a>
+                <a href="https://twitter.com/jokkulabs" target="_blank" aria-label="Twitter"><i class="fab fa-twitter-square"></i></a>
+                <a href="https://linkedin.com/company/jokkulabs" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/jokkulabs" target="_blank" aria-label="GitHub"><i class="fab fa-github-square"></i></a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 jokkulabs. All rights reserved.</p>
+        <p>Designed with passion by Joel for jokkulabs.</p>
+    </footer>
+</body>
+</html>
