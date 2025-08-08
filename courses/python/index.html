@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Programming - Jokkulabs</title>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Modular CSS Files -->
+    <link rel="stylesheet" href="../../styles/landingpage/base.css">
+    <link rel="stylesheet" href="../../styles/landingpage/header.css">
+    <link rel="stylesheet" href="../../styles/landingpage/footer.css">
+    <link rel="stylesheet" href="../../styles/python/lesson-content.css"> <!-- General course page styles -->
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <svg class="logo-icon" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM5 9a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1zm1 4a1 1 0 100 2h6a1 1 0 100-2H6z" />
+            </svg>
+            <h1>jokkulabs</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../../index.html#courses">Courses</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="course-page-container python-color">
+        <section class="course-intro">
+            <h2>Python Programming</h2>
+            <p id="course-intro-text">
+                <!-- Introduction text will be loaded by JavaScript -->
+            </p>
+            <a id="start-course-button" href="#" class="btn-primary" style="display: none;">Start Course</a>
+        </section>
+
+        <section class="course-content-section">
+            <h3>Course Content</h3>
+            <div id="course-content-buttons" class="content-buttons-container">
+                <!-- Course content buttons will be dynamically loaded here by JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 jokkulabs. All rights reserved.</p>
+        <p>Designed with passion by Joel for jokkulabs.</p>
+    </footer>
+
+    <!-- JavaScript to load course content buttons -->
+    <script src="../../scripts/fetchcoursecontents.js"></script>
+    <script>
+        // IMPORTANT: Replace 'YOUR_GITHUB_USERNAME' and 'YOUR_REPO_NAME' with your actual GitHub details.
+        // Ensure 'main' is your default branch name (could be 'master').
+        const githubApiPathForPythonContents = 'Jokku-gamma/JokkuLabs/contents/courses/python/contents?ref=main';
+
+        document.addEventListener('DOMContentLoaded', async () => {
+            // First, load the content buttons from GitHub
+            await generateCourseContentLayout('python', 'course-content-buttons', 'course-intro-text', githubApiPathForPythonContents);
+
+            // After content is loaded, set the "Start Course" button's href to the first lesson
+            // This relies on window.currentCourseLessons being populated by generateCourseContentLayout
+            const startCourseButton = document.getElementById('start-course-button');
+            if (window.currentCourseLessons && window.currentCourseLessons.length > 0) {
+                startCourseButton.href = `./contents/${window.currentCourseLessons[0].name}`;
+                startCourseButton.style.display = 'inline-block'; // Show the button
+            }
+        });
+    </script>
+</body>
+</html>

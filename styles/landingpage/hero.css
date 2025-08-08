@@ -1,0 +1,113 @@
+/* css/hero.css */
+
+.hero-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: calc(100vh - 80px); /* Adjust for header height */
+    padding: 4rem 1rem; /* py-16 px-4 */
+    overflow: hidden;
+    z-index: 1; /* Ensure content is above background blobs */
+}
+
+.hero-content {
+    max-width: 64rem; /* max-w-4xl */
+    margin: 0 auto;
+    z-index: 2; /* Ensure content is above blobs */
+    position: relative; /* For z-index to work */
+}
+
+.hero-section h2 {
+    font-size: 4rem; /* text-6xl */
+    font-weight: 800; /* font-extrabold */
+    line-height: 1.2;
+    margin-bottom: 1.5rem; /* mb-6 */
+    color: #fff;
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); /* drop-shadow-lg */
+}
+
+.hero-section p {
+    font-size: 1.5rem; /* text-2xl */
+    margin-bottom: 2.5rem; /* mb-10 */
+    color: #d1d5db; /* gray-200 */
+    opacity: 0.9;
+}
+
+/* Background Blob Animation */
+.blob-container {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+
+.blob {
+    position: absolute;
+    border-radius: 9999px; /* rounded-full */
+    mix-blend-mode: multiply;
+    filter: blur(80px); /* blur-xl */
+    opacity: 0.3;
+    animation: blob 7s infinite cubic-bezier(0.6, 0.01, 0.4, 1);
+}
+
+.blob-purple {
+    top: 25%; /* top-1/4 */
+    left: 25%; /* left-1/4 */
+    width: 16rem; /* w-64 */
+    height: 16rem; /* h-64 */
+    background-color: #a78bfa; /* purple-500 */
+}
+
+.blob-pink {
+    top: 50%; /* top-1/2 */
+    right: 25%; /* right-1/4 */
+    width: 18rem; /* w-72 */
+    height: 18rem; /* h-72 */
+    background-color: #ec4899; /* pink-500 */
+}
+
+.blob-blue {
+    bottom: 25%; /* bottom-1/4 */
+    left: 50%; /* left-1/2 */
+    width: 20rem; /* w-80 */
+    height: 20rem; /* h-80 */
+    background-color: #60a5fa; /* blue-500 */
+}
+
+.animation-delay-2000 { animation-delay: 2s; }
+.animation-delay-4000 { animation-delay: 4s; }
+
+@keyframes blob {
+    0% { transform: translate(0px, 0px) scale(1); }
+    33% { transform: translate(30px, -50px) scale(1.1); }
+    66% { transform: translate(-20px, 20px) scale(0.9); }
+    100% { transform: translate(0px, 0px) scale(1); }
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: calc(100vh - 60px); /* Adjust for smaller header */
+        padding: 3rem 1rem;
+    }
+    .hero-section h2 {
+        font-size: 2.5rem; /* text-4xl */
+        margin-bottom: 1rem;
+    }
+    .hero-section p {
+        font-size: 1.125rem; /* text-lg */
+        margin-bottom: 2rem;
+    }
+    .blob {
+        filter: blur(40px); /* Less blur on small screens */
+    }
+    .blob-purple, .blob-pink, .blob-blue {
+        width: 10rem;
+        height: 10rem;
+    }
+    .blob-purple { top: 10%; left: 5%; }
+    .blob-pink { top: 60%; right: 10%; }
+    .blob-blue { bottom: 5%; left: 30%; }
+}

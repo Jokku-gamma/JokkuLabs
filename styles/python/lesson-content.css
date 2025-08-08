@@ -1,0 +1,98 @@
+/* styles/lesson/lesson-content.css */
+
+.lesson-content-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2.5rem;
+    background: rgba(255, 255, 255, 0.08); /* Slightly transparent white for content background */
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    color: #e0e0e0; /* Light gray text */
+    line-height: 1.8;
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+    animation: fadeIn 0.8s ease-out; /* Fade-in effect */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.lesson-content-container h1 {
+    font-size: 3rem;
+    color: #60a5fa; /* Blue highlight for main titles */
+    margin-bottom: 1.5rem;
+    text-align: center;
+    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+    font-weight: 800;
+}
+
+.lesson-content-container h2 {
+    font-size: 2rem;
+    color: #93c5fd; /* Lighter blue for subheadings */
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    padding-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.lesson-content-container h3 {
+    font-size: 1.6rem;
+    color: #a78bfa; /* Purple for smaller headings */
+    margin-top: 2rem;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+
+.lesson-content-container p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    text-align: justify; /* Justify text for a cleaner look */
+}
+
+.lesson-content-container ul,
+.lesson-content-container ol {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+    list-style-position: outside; /* Ensure bullets/numbers are outside content flow */
+}
+
+.lesson-content-container ul li {
+    list-style-type: disc;
+    margin-bottom: 0.5rem;
+    font-size: 1.05rem;
+}
+
+.lesson-content-container ol li {
+    list-style-type: decimal;
+    margin-bottom: 0.5rem;
+    font-size: 1.05rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .lesson-content-container {
+        padding: 1.5rem;
+        margin: 1rem auto;
+        border-radius: 0.5rem;
+    }
+    .lesson-content-container h1 {
+        font-size: 2rem;
+    }
+    .lesson-content-container h2 {
+        font-size: 1.5rem;
+    }
+    .lesson-content-container h3 {
+        font-size: 1.3rem;
+    }
+    .lesson-content-container p,
+    .lesson-content-container ul li,
+    .lesson-content-container ol li {
+        font-size: 1rem;
+    }
+    .lesson-content-container ul,
+    .lesson-content-container ol {
+        margin-left: 1.5rem;
+    }
+}

@@ -1,0 +1,41 @@
+/* styles/lesson/code.css */
+
+.lesson-content-container pre {
+    background-color: #1a1a1a; /* Dark background for code */
+    color: #e0e0e0; /* Light text for code */
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    overflow-x: auto; /* Enable horizontal scrolling for long lines */
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-family: 'Fira Code', 'Cascadia Code', 'Consolas', monospace; /* Monospaced font */
+    font-size: 0.95rem;
+    line-height: 1.4;
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.4); /* Inner shadow for depth */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.lesson-content-container code {
+    /* Inline code styling */
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 0.2em 0.4em;
+    border-radius: 0.3em;
+    font-family: 'Fira Code', 'Cascadia Code', 'Consolas', monospace;
+    font-size: 0.9em;
+}
+
+/* Syntax highlighting (basic example, you might use a library like Prism.js for full highlighting) */
+.lesson-content-container pre .keyword { color: #569cd6; } /* Blue */
+.lesson-content-container pre .string { color: #ce9178; } /* Orange */
+.lesson-content-container pre .comment { color: #6a9955; } /* Green */
+.lesson-content-container pre .number { color: #b5cea8; } /* Light Green */
+.lesson-content-container pre .function { color: #dcdcaa; } /* Yellow */
+.lesson-content-container pre .operator { color: #d4d4d4; } /* White */
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .lesson-content-container pre {
+        padding: 1rem;
+        font-size: 0.85rem;
+    }
+}

@@ -1,0 +1,143 @@
+/* css/courses.css */
+
+.courses-section {
+    padding: 5rem 4%; /* py-20 px-4 md:px-8 lg:px-16 */
+    background: rgba(0, 0, 0, 0.4); /* Semi-transparent black */
+    backdrop-filter: blur(8px); /* Frosted glass effect */
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    box-shadow: inset 0 4px 30px rgba(0, 0, 0, 0.2);
+    margin-top: -1rem; /* Overlap slightly with hero for smooth transition */
+    position: relative;
+    z-index: 50; /* Ensure it's above hero blobs */
+}
+
+.courses-section h3 {
+    font-size: 2.5rem; /* text-4xl */
+    font-weight: 800; /* font-extrabold */
+    text-align: center;
+    margin-bottom: 4rem; /* mb-16 */
+    color: #fff;
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+    gap: 2.5rem; /* gap-10 */
+    max-width: 72rem; /* max-w-6xl */
+    margin: 0 auto;
+}
+
+.course-card {
+    padding: 2rem; /* p-8 */
+    border-radius: 1.5rem; /* rounded-2xl */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* shadow-xl */
+    transition: all 0.3s ease-in-out;
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+    display: flex;
+    flex-direction: column;
+}
+
+.course-card:hover {
+    transform: translateY(-0.5rem); /* hover:-translate-y-2 */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4); /* hover:shadow-2xl */
+}
+
+.course-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem; /* mb-6 */
+}
+
+.course-icon {
+    width: 4rem; /* w-16 */
+    height: 4rem; /* h-16 */
+    border-radius: 9999px; /* rounded-full */
+    margin-right: 1rem; /* mr-4 */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.course-card h4 {
+    font-size: 1.875rem; /* text-3xl */
+    font-weight: 700; /* font-bold */
+    color: #fff;
+    margin: 0;
+}
+
+.course-card p {
+    font-size: 1.125rem; /* text-lg */
+    color: #d1d5db; /* gray-200 */
+    margin-bottom: 2rem; /* mb-8 */
+    line-height: 1.75; /* leading-relaxed */
+    flex-grow: 1; /* Makes paragraphs take available space */
+}
+
+.course-card .btn-secondary {
+    display: block; /* block */
+    width: fit-content; /* Adjust width to content */
+    margin: 0 auto; /* Center the button */
+    padding: 0.75rem 1.5rem; /* py-3 px-6 */
+    font-weight: 600; /* font-semibold */
+    border-radius: 9999px; /* rounded-full */
+    transition: all 0.3s ease-in-out;
+}
+
+.course-card .btn-secondary:hover {
+    transform: scale(1.05);
+    background-color: #e5e7eb; /* gray-200 */
+}
+
+/* Specific Card Colors */
+.flutter-card {
+    background: linear-gradient(135deg, #1e3a8a, #172554); /* from-blue-700 to-blue-900 */
+    border-color: #2563eb; /* blue-600 */
+}
+.flutter-card .btn-secondary {
+    color: #1e3a8a; /* blue-800 */
+}
+
+.python-card {
+    background: linear-gradient(135deg, #166534, #14532d); /* from-green-700 to-green-900 */
+    border-color: #16a34a; /* green-600 */
+}
+.python-card .btn-secondary {
+    color: #166534; /* green-800 */
+}
+
+.c-card {
+    background: linear-gradient(135deg, #991b1b, #7f1d1d); /* from-red-700 to-red-900 */
+    border-color: #dc2626; /* red-600 */
+}
+.c-card .btn-secondary {
+    color: #991b1b; /* red-800 */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .courses-section {
+        padding: 3rem 2%;
+    }
+    .courses-section h3 {
+        font-size: 2rem;
+        margin-bottom: 2.5rem;
+    }
+    .course-grid {
+        grid-template-columns: 1fr; /* Stack cards on small screens */
+        gap: 1.5rem;
+    }
+    .course-card {
+        padding: 1.5rem;
+    }
+    .course-card h4 {
+        font-size: 1.5rem;
+    }
+    .course-card p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    .course-card .btn-secondary {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.2rem;
+    }
+}

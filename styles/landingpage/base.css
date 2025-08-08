@@ -1,0 +1,69 @@
+/* css/base.css */
+
+/* Basic Reset & Global Styles */
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #0f002b, #2a0050, #4a005a); /* Deep gradient background */
+    color: #e0e0e0;
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    -webkit-font-smoothing: antialiased; /* Smoother font rendering */
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Utility for rounded corners */
+.rounded-lg { border-radius: 0.75rem; }
+.rounded-xl { border-radius: 1rem; }
+.rounded-2xl { border-radius: 1.5rem; }
+.rounded-full { border-radius: 9999px; }
+
+/* General Button Styles */
+.btn-primary, .btn-secondary {
+    display: inline-block;
+    padding: 0.75rem 2rem; /* py-3 px-8 */
+    font-weight: 600; /* font-semibold */
+    text-decoration: none;
+    border-radius: 9999px; /* rounded-full */
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary {
+    background-color: #3b82f6; /* blue-600 */
+    color: #fff;
+    font-size: 1.25rem; /* text-xl */
+    padding: 1rem 2.5rem; /* py-4 px-10 */
+}
+
+.btn-primary:hover {
+    background-color: #2563eb; /* blue-700 */
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.btn-secondary {
+    background-color: #fff;
+    text-align: center;
+    font-size: 1.125rem; /* text-lg */
+}
+
+/* Highlight text */
+.highlight {
+    color: #60a5fa; /* blue-400 */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    body {
+        font-size: 0.95rem;
+    }
+    .btn-primary {
+        font-size: 1.1rem;
+        padding: 0.8rem 2rem;
+    }
+    .btn-secondary {
+        font-size: 1rem;
+        padding: 0.6rem 1.5rem;
+    }
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Python & History - Jokkulabs</title>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Modular CSS Files -->
+    <link rel="stylesheet" href="../../../styles/landingpage/base.css">
+    <link rel="stylesheet" href="../../../styles/landingpage/header.css">
+    <link rel="stylesheet" href="../../../styles/landingpage/footer.css">
+    <link rel="stylesheet" href="../../../styles/course-page.css">
+    <link rel="stylesheet" href="../../../styles/lesson/lesson-content.css"> <!-- General lesson content styles -->
+    <link rel="stylesheet" href="../../../styles/lesson/code.css">         <!-- Code block styles -->
+    <link rel="stylesheet" href="../../../styles/lesson/output.css">       <!-- Output block styles -->
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <svg class="logo-icon" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM5 9a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1zm1 4a1 1 0 100 2h6a1 1 0 100-2H6z" />
+            </svg>
+            <h1>jokkulabs</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../../../index.html#courses">Courses</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="lesson-content-container">
+        <h1>Introduction to Python & Its History</h1>
+        <p>Welcome to the first lesson of the Python Programming course! In this module, we'll embark on a journey to understand what Python is, why it's so popular, and its fascinating history.</p>
+
+        <h2>What is Python?</h2>
+        <p>Python is a high-level, interpreted, general-purpose programming language. Created by Guido van Rossum and first released in 1991, Python's design philosophy emphasizes code readability with its notable use of significant indentation. It supports multiple programming paradigms, including object-oriented, imperative, and functional programming.</p>
+        <p>Its extensive standard library and vast ecosystem of third-party libraries make it suitable for a wide range of applications, from web development and data analysis to artificial intelligence and scientific computing.</p>
+
+        <h2>A Brief History of Python</h2>
+        <p>Python's development began in the late 1980s by Guido van Rossum at CWI in the Netherlands as a successor to the ABC language. The name "Python" itself comes from the British comedy group Monty Python, as Guido was a big fan.</p>
+        <ul>
+            <li><strong>1991:</strong> Python 0.9.0 is released.</li>
+            <li><strong>1994:</strong> Python 1.0 is released with new features like lambda, map, filter, and reduce.</li>
+            <li><strong>2000:</strong> Python 2.0 is released, introducing list comprehensions and a garbage collection system.</li>
+            <li><strong>2008:</strong> Python 3.0 (also known as "Python 3000" or "Py3k") is released. This was a major, backward-incompatible revision of the language, designed to fix fundamental flaws and make the language cleaner. Key changes included print becoming a function, improved Unicode support, and changes to integer division.</li>
+            <li><strong>Today:</strong> Python 3.x is the current and actively developed version, widely adopted across industries for its simplicity and power.</li>
+        </ul>
+        <p>Python's journey from a hobby project to one of the most widely used programming languages is a testament to its flexibility, readability, and the strong community built around it.</p>
+
+        <h2>First Python Code Example: "Hello, Jokkulabs!"</h2>
+        <p>Let's write our very first Python program. It's a tradition to start with a "Hello, World!" program. We'll make it "Hello, Jokkulabs!".</p>
+        <pre><code class="language-python">
+# This is a comment in Python
+# The 'print()' function is used to display output to the console.
+print("Hello, Jokkulabs!")
+        </code></pre>
+
+        <div class="output-block">
+            <strong>Expected Output:</strong>
+            <pre><code>Hello, Jokkulabs!</code></pre>
+        </div>
+
+        <p>This simple line of code demonstrates Python's straightforward syntax. You don't need semicolons at the end of lines, and the `print()` function is intuitive.</p>
+
+        <div class="navigation-buttons">
+            <a href="../index.html" class="btn-secondary">Back to Course Content</a>
+            <a id="next-lesson-button" href="#" class="btn-secondary" style="display:none;">Next Lesson &#8594;</a>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 jokkulabs. All rights reserved.</p>
+        <p>Designed with passion by Joel for jokkulabs.</p>
+    </footer>
+
+    <!-- JavaScript for lesson navigation -->
+    <script src="../../../scripts/fetchcoursecontents.js"></script>
+    <script>
+        // IMPORTANT: Replace 'YOUR_GITHUB_USERNAME' and 'YOUR_REPO_NAME' with your actual GitHub details.
+        // Ensure 'main' is your default branch name (could be 'master').
+        const githubApiPathForPythonContents = 'Jokku-gamma/JokkuLabs/contents/courses/python/contents?ref=main';
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Call setupLessonNavigation for this specific lesson
+            setupLessonNavigation('python', '01 - Introduction to Python & History.html', 'next-lesson-button', githubApiPathForPythonContents);
+        });
+    </script>
+</body>
+</html>

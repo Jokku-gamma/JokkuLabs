@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jokkulabs - Learn Cutting-Edge Tech Skills</title>
+    <!-- Google Fonts - Inter for a modern look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Modular CSS Files -->
+    <link rel="stylesheet" href="styles/landingpage/base.css">
+    <link rel="stylesheet" href="styles/landingpage/header.css">
+    <link rel="stylesheet" href="styles/landingpage/hero.css">
+    <link rel="stylesheet" href="styles/landingpage/courses.css">
+    <link rel="stylesheet" href="styles/landingpage/footer.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <svg class="logo-icon" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM5 9a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1zm1 4a1 1 0 100 2h6a1 1 0 100-2H6z" />
+            </svg>
+            <h1>jokkulabs</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h2>Unlock Your Potential with <span class="highlight">Cutting-Edge</span> Tech Skills</h2>
+            <p>Dive into the world of Flutter, Python, and C programming. Your journey to becoming a skilled developer starts here.</p>
+            <a href="#courses" class="btn-primary">Explore Courses</a>
+        </div>
+        <!-- Background animation/shapes (conceptual) -->
+        <div class="blob-container">
+            <div class="blob blob-purple"></div>
+            <div class="blob blob-pink animation-delay-2000"></div>
+            <div class="blob blob-blue animation-delay-4000"></div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="courses-section">
+        <h3>Our Popular Courses</h3>
+        <div class="course-grid">
+
+            <!-- Flutter Course Card -->
+            <div class="course-card flutter-card">
+                <div class="course-header">
+                    <img src="https://placehold.co/60x60/007AFF/FFFFFF?text=FL" alt="Flutter Icon" class="course-icon" />
+                    <h4>Flutter Development</h4>
+                </div>
+                <p>Build beautiful, natively compiled applications for mobile, web, and desktop from a single codebase. Master UI/UX and cross-platform development.</p>
+                <a href="#flutter-page" class="btn-secondary">Learn Flutter</a>
+            </div>
+
+            <!-- Python Course Card -->
+            <div class="course-card python-card">
+                <div class="course-header">
+                    <img src="https://placehold.co/60x60/306998/FFD43B?text=PY" alt="Python Icon" class="course-icon" />
+                    <h4>Python Programming</h4>
+                </div>
+                <p>From web development with Django/Flask to data science and machine learning, Python is your gateway to diverse career paths.</p>
+                <a href="courses/python/index.html" class="btn-secondary">Learn Python</a>
+            </div>
+
+            <!-- C Programming Course Card -->
+            <div class="course-card c-card">
+                <div class="course-header">
+                    <img src="https://placehold.co/60x60/555555/FFFFFF?text=C" alt="C Icon" class="course-icon" />
+                    <h4>C Programming Fundamentals</h4>
+                </div>
+                <p>Master the foundational language of systems programming. Understand memory management, algorithms, and data structures.</p>
+                <a href="#c-page" class="btn-secondary">Learn C</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 jokkulabs. All rights reserved.</p>
+        <p>Designed with passion by Joel for jokkulabs.</p>
+    </footer>
+</body>
+</html>
