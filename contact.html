@@ -3,78 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Jokkulabs</title>
-    <!-- Google Fonts - Inter -->
+    <title>Contact - Joel</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-    <!-- Modular CSS Files -->
     <link rel="stylesheet" href="styles/landingpage/base.css">
     <link rel="stylesheet" href="styles/landingpage/header.css">
     <link rel="stylesheet" href="styles/landingpage/footer.css">
-    <link rel="stylesheet" href="styles/lesson/lesson-content.css"> <!-- Reusing for main content container style -->
+    <link rel="stylesheet" href="styles/lesson/lesson-content.css">
     <style>
-        /* Specific styles for Contact Us content */
-        .contact-us-content {
+        /* Specific styles for Contact content */
+        .contact-content {
             padding: 2rem;
             text-align: center;
         }
-        .contact-us-content h2 {
-            font-size: 2.5rem;
-            color: #93c5fd;
-            margin-bottom: 1.5rem;
+
+        .contact-content h2 {
+            font-size: 2.8rem;
+            color: var(--primary-accent);
+            margin-bottom: 1rem;
+            font-weight: 700;
         }
-        .contact-info {
-            margin-top: 2rem;
+        
+        .contact-content p {
             font-size: 1.1rem;
-            color: #c0c0c0;
+            line-height: 1.6;
+            color: var(--text-color);
+            max-width: 700px;
+            margin: 0 auto 2rem;
         }
-        .contact-info p {
-            margin-bottom: 0.8rem;
+
+        .contact-links {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            max-width: 500px;
+            margin: 0 auto;
         }
-        .contact-info a {
-            color: #60a5fa;
+
+        .contact-link-card {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--card-bg);
+            padding: 1.5rem 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
             text-decoration: none;
-            transition: color 0.3s ease-in-out;
-        }
-        .contact-info a:hover {
-            color: #93c5fd;
-            text-decoration: underline;
-        }
-        .social-links {
-            margin-top: 2.5rem;
-            text-align: center;
-        }
-        .social-links a {
-            display: inline-block;
-            margin: 0 1rem;
             color: #fff;
-            font-size: 2.5rem;
-            transition: transform 0.2s ease-in-out, color 0.3s ease-in-out;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
         }
-        .social-links a:hover {
-            transform: translateY(-5px) scale(1.1);
-            color: #60a5fa;
+
+        .contact-link-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
         }
+
+        .contact-link-card i {
+            font-size: 2rem;
+            margin-right: 1.5rem;
+            color: var(--primary-accent);
+        }
+
+        .contact-link-card .text-content {
+            text-align: left;
+        }
+
+        .contact-link-card h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .contact-link-card p {
+            font-size: 0.9rem;
+            color: #ccc;
+            margin: 0;
+        }
+        
         /* Using Font Awesome for icons */
         @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css");
-
-        /* Responsive adjustments */
+        
         @media (max-width: 768px) {
-            .contact-us-content h2 {
-                font-size: 2rem;
+            .contact-content h2 {
+                font-size: 2.2rem;
             }
-            .contact-info {
+            .contact-content p {
                 font-size: 1rem;
             }
-            .social-links a {
-                font-size: 2rem;
-                margin: 0 0.5rem;
+            .contact-link-card {
+                padding: 1rem 1.5rem;
+                flex-direction: column;
+            }
+            .contact-link-card i {
+                margin-right: 0;
+                margin-bottom: 1rem;
+            }
+            .contact-link-card .text-content {
+                text-align: center;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Header Section -->
     <header>
         <div class="logo">
             <svg class="logo-icon" fill="currentColor" viewBox="0 0 20 20">
@@ -92,30 +120,41 @@
     </header>
 
     <main class="lesson-content-container">
-        <div class="contact-us-content">
-            <h2>Get in Touch with Jokkulabs</h2>
-            <p>We'd love to hear from you! Whether you have questions about our courses, need support, or want to provide feedback, our team is here to help.</p>
+        <div class="contact-content">
+            <h2>Let's Connect</h2>
+            <p>I am always open to discussing new opportunities, collaborations, or answering questions related to my expertise. Please feel free to reach out through the channels below.</p>
 
-            <div class="contact-info">
-                <p><strong>Email:</strong> <a href="mailto: joelkurianabraham06020127@gmail.com">joelkurianabraham06020127@gmail.com</a></p>
-                <p><strong>Phone:</strong> <a href="tel:+91 7306837245">+91 7306837245</a></p>
-                <p><strong>Address:</strong>Trivandrum, Kerala </p>
+            <div class="contact-links">
+                <a href="https://www.linkedin.com/in/joel-kurian-abraham/" class="contact-link-card" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                    <div class="text-content">
+                        <h4>Connect on LinkedIn</h4>
+                        <p>Join my professional network for updates and discussions.</p>
+                    </div>
+                </a>
+
+                <a href="mailto:joelkurianabraham06020127@gmail.com" class="contact-link-card">
+                    <i class="fas fa-envelope"></i>
+                    <div class="text-content">
+                        <h4>Send an Email</h4>
+                        <p>For inquiries, projects, or questions within my expertise.</p>
+                    </div>
+                </a>
                 
-            </div>
-
-            <div class="social-links">
-                <p>Connect with us on social media:</p>
- 
-                <a href="https://linkedin.com/company/jokkulabs" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/jokkulabs" target="_blank" aria-label="GitHub"><i class="fab fa-github-square"></i></a>
+                <a href="https://jokku-gamma.github.io/jokkuverse/" class="contact-link-card" target="_blank">
+                    <i class="fas fa-briefcase"></i>
+                    <div class="text-content">
+                        <h4>View My Portfolio</h4>
+                        <p>Explore my other projects and professional work.</p>
+                    </div>
+                </a>
             </div>
         </div>
     </main>
 
-    <!-- Footer Section -->
     <footer>
         <p>&copy; 2025 jokkulabs. All rights reserved.</p>
-        <p>Designed with passion by Joel for jokkulabs.</p>
+        <p>Built with passion by Joel.</p>
     </footer>
 </body>
 </html>
