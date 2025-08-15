@@ -141,3 +141,49 @@
         padding: 0.6rem 1.2rem;
     }
 }
+
+.content-buttons-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.content-button-wrapper {
+    background: rgba(255, 255, 255, 0.05); /* Very subtle background for the wrapper */
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    overflow: hidden; /* Ensures border-radius applies to child */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle wrapper border */
+}
+
+.content-button-wrapper:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.content-button {
+    display: block;
+    width: 100%;
+    padding: 1rem 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: #fff;
+    /* Updated gradient for a more vibrant look */
+    background: linear-gradient(135deg, #4a005a, #2a0050); /* Dark purple gradient */
+    border: none; /* Remove previous border */
+    border-radius: 0.75rem; /* Match parent wrapper */
+    transition: all 0.3s ease-in-out; /* Smooth transition for all properties */
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.05), 0 5px 15px rgba(0, 0, 0, 0.3); /* Subtle inner shadow, stronger outer */
+}
+
+.content-button:hover {
+    /* More pronounced hover effect */
+    background: linear-gradient(135deg, #5a006a, #3a0060); /* Lighter purple gradient on hover */
+    color: #93c5fd; /* Light blue on hover for contrast */
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.1), 0 8px 20px rgba(0, 0, 0, 0.5); /* Stronger shadows */
+    transform: scale(1.02); /* Slight scale on hover */
+}
