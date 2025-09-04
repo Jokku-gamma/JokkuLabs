@@ -133,24 +133,7 @@
     </div>
 
     <!-- JavaScript to manage the loading state -->
-    <script>
-        window.addEventListener('load', () => {
-            const loadingScreen = document.getElementById('loading-screen');
-            const mainContent = document.getElementById('main-content');
-
-            // Start the fade-out of the loading screen
-            loadingScreen.style.opacity = '0';
-
-            // After the fade-out, hide the loading screen and show the main content
-            setTimeout(() => {
-                loadingScreen.style.display = 'none';
-                mainContent.style.display = 'block';
-                // Trigger the fade-in of the main content
-                setTimeout(() => {
-                    mainContent.style.opacity = '1';
-                }, 10); // Small delay to ensure display:block is applied
-            }, 700); // Matches the CSS transition duration
-        });
+    <script src="index.js"></script>
     </script>
 </body>
 </html>
